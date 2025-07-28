@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+
+
+
+</head>
+
+<body id="vanta-bg">
+    <div id="overlay"></div>
+    <h1>
+        <img src="logo.png" alt="Game Icon" class="title-icon">
+        Simon Game
+    </h1>
+    <h2>Press any key to start the game</h2>
+
+    <div class="btn-container">
+        <div class="btn red" id="red"></div>
+        <div class="btn yellow" id="yellow"></div>
+        <div class="btn green" id="green"></div>
+        <div class="btn purple" id="purple"></div>
+    </div>
+    <div id="high-score">High Score: 0</div>
+   
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="app2.js"></script>
+
+    <script>
+        VANTA.FOG({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0x00ffff,   //Cyan / neon gas-like glow
+            midtoneColor: 0x0a0a0a,     //Very dark gray fog body
+            lowlightColor: 0x000000,
+            baseColor: 0x080808,        //Deepest fog/dark area
+            blurFactor: 0.6,            //Background base color
+            speed: 2.0,
+            zoom: 1.2
+        });
+    </script>
+
+
+
+</body>
+
+</html>

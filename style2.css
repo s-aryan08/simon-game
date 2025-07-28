@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #00fff7;
+  text-shadow:
+    0 0 3px #00fff7,
+    0 0 2px #eaeaea
+    1 1 4px  white;
+   animation: soft-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 5px #00fff7,
+      0 0 10px #00fff7,
+      0 0 20px #00fff7,
+      0 0 40px #00c9ff;
+  }
+  to {
+    text-shadow:
+      0 0 10px #00fff7,
+      0 0 20px #00fff7,
+      0 0 30px #00fff7,
+      0 0 60px #00c9ff,
+      0 0 100px #00c9ff;
+  }
+}
+
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  height: 150px;
+  width: 150px;
+  border-radius: 20%;
+  border: 5px solid white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.red {
+  background-color: #d95980;
+}
+
+.yellow {
+  background-color: #f99b45;
+}
+
+.green {
+  background-color: #63aac0;
+}
+
+.purple {
+  background-color: #819ff9;
+}
+
+.flash {
+  filter: brightness(2);
+}
+
+.userflash {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+}
+
+@media (max-width: 500px) {
+  .btn-container {
+    grid-template-columns: repeat(2, 100px);
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+#high-score{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #00f7ff80;
+    border: 1px solid #00f7ff40;
+}
+#vanta-bg {
+  min-height: 100vh;
+  width: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  z-index: 9999; /* keep it above Vanta canvas */
+  pointer-events: none; /* allow clicks to pass through */
+}
+
+.flash-red {
+  animation: flashRed 0.3s;
+}
+
+@keyframes flashRed {
+  0% {
+    background-color: rgba(255, 0, 0, 0.6);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+.title-icon{
+
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
